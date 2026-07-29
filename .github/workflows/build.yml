@@ -34,6 +34,11 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
+      - name: Download Gradle Wrapper
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          curl -L -o gradle/wrapper/gradle-wrapper.jar "https://github.com/gradle/gradle/raw/v7.5.1/gradle/wrapper/gradle-wrapper.jar"
+
       - name: Build Plugins
         run: |
           cd $GITHUB_WORKSPACE/src
