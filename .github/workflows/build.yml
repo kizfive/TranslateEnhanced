@@ -8,6 +8,9 @@ on:
     branches-ignore:
       - builds
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
